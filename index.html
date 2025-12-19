@@ -64,9 +64,149 @@
                     <h2>Portraits</h2>
                     <p class="section-description">Portraits</p>
                 </div>
+                <div class="gallery-grid" id="peopleGallery">
+                    <!--Photos will be loaded dynamically-->
+                </div>
             </section>
 
+            <!-- Landscapes Gallery -->
+             <section id="landscapes" class="gallery-section">
+                <div class="section-header">
+                    <h2>Paysages</h2>
+                    <p class="section-description">Photos de paysages urbains et ruraux</p>
+                </div>
+                <div class="gallery-grid" id="landscapesGallery">
+                    <!--Photos will be loaded dynamically-->
+                </div>
+             </section>
+
+            <!-- Vehicles Gallery-->
+             <section id="vehicles" class="gallery-section">
+                <div class="section-header">
+                    <h2>Vehicules</h2>
+                    <p class="section-description">Photographie automobile et mécanique</p>
+                </div>
+                <div class="gallery-grid" id="vehiclesGallery">
+                    <!--Photos will be loaded dynamically-->
+                </div>
+             </section>
+
+             <!--About section-->
+             <section id="about" class="about-section">
+                <div class="about-container">
+                <h2>À Propos</h2>
+                    <div class="about-content">
+                        <p>Bienvenue sur mon portefolio, je suis un jeune photographe qui a débuté il y a très peu</p>
+                        <p>gneu gneu gneu gneu</p>
+                    </div>
+                </div>
+             </section>
+             
+             <!--Contact section-->
+             <section id="contact" class="contact-section">
+                <div class="contact-container">
+                    <h2>Contact</h2>
+                    <p class="contact-intro">Interessé par une seance photo ou vous voulez poser une simple question ? Contactez moi pour discuter</p>
+                    
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <h3>Instagram</h3>
+                            <p><a href="https://www.instagram.com/z_younes_/" target="_blank">@z_younes_</a></p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Disponibilités</h3>
+                            <p>Lundi-Vendredi : Sur rendez-vous</p>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="shootType">Type de Photoshoot</label>
+                            <select id="shootType" name="shootType" required>
+                                <option value="">Sélectionnez un type</option>
+                                <option value="portrait">Portrait</option>
+                                <option value="wedding">Mariage</option>
+                                <option value="event">Évènement</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message"r rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Envoyer</button>
+                    </form>
+                </div>
+             </section>
         </main>
 
+        <!--Lightbox modal-->
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" id="lightboxClose">✕</button>
+            <button class="lightbox-prev" id="lightboxPrev">❮</button>
+            <button class="lightbox-next" id="lightboxNext">❯</button>
+            <div class="lightbox-content">
+                <img id="lightboxImage" src="" alt="">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxDescription"></p>
+            </div>
+        </div>
+
+        <!--Contact modal-->
+        <div class="modal" id="contactModal">
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose">✕</button>
+                <h2>Contactez-moi !</h2>
+                <form class="contact-form" id="contactFormModal">
+                    <div class="form-group">
+                        <label for="modalName">Nom</label>
+                        <input type="text" id="modalName" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="modalEmail">Email</label>
+                        <input type="email" id="modalEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="modalPhone">Téléphone</label>
+                        <input type="tel" id="modalPhone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="modalShootType">Type de Photoshoot</label>
+                        <select id="modalShootType" name="shootType" required>
+                            <option value="">Sélectionnez un type</option>
+                            <option value="portrait">Portrait</option>
+                            <option value="wedding">Mariage</option>
+                            <option value="event">Événement</option>
+                            <option value="product">Produit</option>
+                            <option value="other">Autres</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="modalMessage">Message</label>
+                        <textarea id="modalMessage" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Envoyer</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Floating Contact Button -->
+         <button class="floating-contact-btn" id="floatingContactBtn" title="Contactez-moi !">
+            ✉️
+         </button>
+         
+         <script src="/script.js"></script>
     </body>
 </html>
